@@ -9,6 +9,7 @@
 <title>RIFINITO DI ROMA</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
 <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css"/>
 
 <style>
@@ -26,7 +27,7 @@ overflow-x:hidden;
 background:#f5f5f5;
 }
 
-/* HEADER */
+/* LUXURY GLASS HEADER */
 
 header{
 display:flex;
@@ -36,8 +37,11 @@ padding:15px 25px;
 position:sticky;
 top:0;
 z-index:1000;
+
 background:rgba(11,28,44,0.65);
 backdrop-filter:blur(12px);
+-webkit-backdrop-filter:blur(12px);
+
 border-bottom:1px solid rgba(255,255,255,0.1);
 box-shadow:0 8px 25px rgba(0,0,0,0.15);
 }
@@ -47,6 +51,7 @@ font-size:24px;
 font-weight:600;
 letter-spacing:2px;
 color:white;
+text-shadow:0 2px 10px rgba(212,163,115,0.4);
 }
 
 .logo span{
@@ -76,6 +81,7 @@ color:white;
 text-decoration:none;
 padding:10px 0;
 border-bottom:1px solid rgba(255,255,255,0.1);
+font-weight:500;
 }
 
 nav a:hover{
@@ -92,11 +98,16 @@ align-items:center;
 justify-content:center;
 text-align:center;
 color:white;
+padding:20px;
 }
 
 .hero h1{
 font-size:40px;
 margin-bottom:15px;
+}
+
+.hero p{
+margin-bottom:20px;
 }
 
 .btn{
@@ -105,11 +116,13 @@ padding:14px 28px;
 color:white;
 text-decoration:none;
 border-radius:5px;
+font-weight:500;
 }
 
-/* CONTAINER */
+/* SECTIONS */
 
 .container{
+width:100%;
 max-width:1100px;
 margin:auto;
 padding:40px 20px;
@@ -137,11 +150,30 @@ text-align:center;
 display:grid;
 grid-template-columns:1fr;
 gap:25px;
+perspective:1000px;
+}
+
+.project-card{
+overflow:hidden;
+border-radius:12px;
+transform-style:preserve-3d;
+transition:transform 0.4s ease, box-shadow 0.4s ease;
 }
 
 .project-card img{
 width:100%;
+display:block;
 border-radius:12px;
+transition:transform 0.5s ease;
+}
+
+.project-card:hover{
+transform:rotateY(8deg) rotateX(4deg) scale(1.05);
+box-shadow:0 20px 40px rgba(0,0,0,0.25);
+}
+
+.project-card:hover img{
+transform:scale(1.1);
 }
 
 /* ABOUT */
@@ -152,58 +184,55 @@ border-radius:10px;
 margin-bottom:20px;
 }
 
-/* CONTACT NEW DESIGN */
+/* CONTACT */
 
 .contact{
-background:#f3f3f3;
-padding:60px 20px;
+background:#0b1c2c;
+color:white;
+padding:40px 20px;
 }
 
-.contact-card{
-background:white;
-padding:25px;
-border-radius:10px;
-box-shadow:0 6px 15px rgba(0,0,0,0.08);
+.contact-info{
 margin-bottom:25px;
+line-height:1.8;
 }
 
-.contact-card p{
-margin-bottom:15px;
-}
-
-.map iframe{
-border-radius:10px;
+.contact-info a{
+color:#d4a373;
+text-decoration:none;
 }
 
 .contact form{
-background:white;
-padding:25px;
-border-radius:10px;
-box-shadow:0 6px 15px rgba(0,0,0,0.08);
 display:flex;
 flex-direction:column;
 gap:15px;
-margin-top:25px;
 }
 
 .contact input,
 .contact textarea{
-padding:14px;
+padding:12px;
 border:none;
-background:#f1efec;
-border-radius:6px;
+border-radius:5px;
 }
 
 .contact button{
-background:black;
-color:white;
-padding:14px;
+background:#d4a373;
 border:none;
-border-radius:6px;
+padding:12px;
+color:white;
+border-radius:5px;
 cursor:pointer;
 }
 
-/* WHATSAPP */
+/* MAP */
+
+.map{
+margin-top:30px;
+border-radius:10px;
+overflow:hidden;
+}
+
+/* WHATSAPP BUTTON */
 
 .whatsapp{
 position:fixed;
@@ -215,6 +244,7 @@ font-size:24px;
 padding:12px 16px;
 border-radius:50%;
 text-decoration:none;
+box-shadow:0 4px 10px rgba(0,0,0,0.3);
 }
 
 /* RESPONSIVE */
@@ -230,6 +260,8 @@ display:flex !important;
 flex-direction:row;
 position:static;
 background:none;
+width:auto;
+padding:0;
 }
 
 nav a{
@@ -278,6 +310,10 @@ font-size:55px;
 
 <h1 data-aos="fade-down">Luxury Interior Design</h1>
 
+<p data-aos="fade-down" data-aos-delay="200">
+Transform your space with elegant and modern interior solutions.
+</p>
+
 <a href="#projects" class="btn" data-aos="fade-up">View Portfolio</a>
 
 </div>
@@ -286,14 +322,29 @@ font-size:55px;
 
 <section id="services" class="container">
 
-<h2 style="text-align:center;margin-bottom:30px;">Our Services</h2>
+<h2 style="text-align:center;margin-bottom:30px;" data-aos="fade-up">Our Services</h2>
 
 <div class="services">
 
-<div class="card"><h3>Home Interior</h3></div>
-<div class="card"><h3>Modular Kitchen</h3></div>
-<div class="card"><h3>Office Design</h3></div>
-<div class="card"><h3>Renovation</h3></div>
+<div class="card" data-aos="fade-up">
+<h3>Home Interior</h3>
+<p>Beautiful and comfortable home interior designs.</p>
+</div>
+
+<div class="card" data-aos="fade-up" data-aos-delay="100">
+<h3>Modular Kitchen</h3>
+<p>Stylish and functional kitchen designs.</p>
+</div>
+
+<div class="card" data-aos="fade-up" data-aos-delay="200">
+<h3>Office Design</h3>
+<p>Professional workspace interiors.</p>
+</div>
+
+<div class="card" data-aos="fade-up" data-aos-delay="300">
+<h3>Renovation</h3>
+<p>Upgrade your existing spaces.</p>
+</div>
 
 </div>
 
@@ -301,19 +352,19 @@ font-size:55px;
 
 <section id="projects" class="container">
 
-<h2 style="text-align:center;margin-bottom:30px;">Our Projects</h2>
+<h2 style="text-align:center;margin-bottom:30px;" data-aos="fade-up">Our Projects</h2>
 
 <div class="projects">
 
-<div class="project-card">
+<div class="project-card" data-aos="zoom-in">
 <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0">
 </div>
 
-<div class="project-card">
+<div class="project-card" data-aos="zoom-in">
 <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c">
 </div>
 
-<div class="project-card">
+<div class="project-card" data-aos="zoom-in">
 <img src="https://images.unsplash.com/photo-1600566752355-35792bedcfea">
 </div>
 
@@ -321,64 +372,58 @@ font-size:55px;
 
 </section>
 
-<section id="about" class="container about">
+<section id="about" class="container about" data-aos="fade-right">
 
 <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c">
 
 <h2>About Us</h2>
 
 <p>
-We design luxury interiors that combine elegance and functionality.
+We are a creative interior design studio specializing in luxury and modern interiors.
+Our mission is to design beautiful and functional spaces.
 </p>
 
 </section>
 
-<!-- NEW CONTACT SECTION -->
-
-<section id="contact" class="contact">
+<section id="contact" class="contact" data-aos="fade-up">
 
 <div class="container">
 
-<h2 style="font-size:28px;margin-bottom:20px;">Visit Our Studio</h2>
+<h2 style="text-align:center;margin-bottom:30px;">Contact Us</h2>
 
-<div class="contact-card">
+<div class="contact-info">
 
-<p><strong>📍 Address</strong><br>
+<p><strong>Address:</strong><br>
 RR Interiors, Katari Hill Rd, near A.M. College,<br>
 Shiv Puri Colony, Gaya, Bihar 823001</p>
 
-<p><strong>📞 Phone</strong><br>
+<p><strong>Phone:</strong>
 <a href="tel:9288336686">9288336686</a></p>
 
-<p><strong>✉ Email</strong><br>
-info@rifinitodiroma.com</p>
-
 </div>
+
+<form>
+
+<input type="text" placeholder="Your Name">
+
+<input type="email" placeholder="Email">
+
+<textarea rows="4" placeholder="Message"></textarea>
+
+<button>Send Message</button>
+
+</form>
 
 <div class="map">
 
 <iframe
 src="https://maps.google.com/maps?q=Katari%20Hill%20Rd%20Gaya&t=&z=13&ie=UTF8&iwloc=&output=embed"
 width="100%"
-height="260"
+height="300"
 style="border:0;">
 </iframe>
 
 </div>
-
-<h2 style="margin-top:30px;">Send Us a Message</h2>
-
-<form onsubmit="sendToWhatsApp(); return false;">
-
-<input id="name" type="text" placeholder="Your Name" required>
-
-<input id="phone" type="tel" placeholder="Your Phone" required>
-
-<textarea id="message" rows="4" placeholder="Your Message" required></textarea>
-
-<button type="submit">Send Message</button>
-
-</form>
 
 </div>
 
@@ -396,26 +441,14 @@ once:true
 });
 
 function toggleMenu(){
-var menu=document.getElementById("menu");
-menu.style.display = menu.style.display==="flex" ? "none" : "flex";
+
+var menu = document.getElementById("menu");
+
+if(menu.style.display === "flex"){
+menu.style.display = "none";
+}else{
+menu.style.display = "flex";
 }
-
-/* WHATSAPP FORM */
-
-function sendToWhatsApp(){
-
-var name=document.getElementById("name").value;
-var phone=document.getElementById("phone").value;
-var message=document.getElementById("message").value;
-
-var text=
-"Name: "+name+"%0a"+
-"Phone: "+phone+"%0a"+
-"Message: "+message;
-
-var url="https://wa.me/919288336686?text="+text;
-
-window.open(url,"_blank");
 
 }
 
