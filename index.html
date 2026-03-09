@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rifinito Di Roma | Interior Design</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:#f6f3ef;
+color:#222;
+}
+
+/* NAVBAR */
+
+nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 8%;
+background:#0e1a2b;
+color:white;
+position:sticky;
+top:0;
+}
+
+nav h1{
+font-size:22px;
+}
+
+nav ul{
+display:flex;
+list-style:none;
+gap:30px;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+}
+
+/* HERO */
+
+.hero{
+height:90vh;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+color:white;
+background:url("https://images.unsplash.com/photo-1618221195710-dd6b41faaea6") center/cover no-repeat;
+}
+
+.hero-content{
+background:rgba(0,0,0,0.5);
+padding:40px;
+border-radius:10px;
+animation:fadeUp 1s ease;
+}
+
+.hero h2{
+font-size:48px;
+margin-bottom:15px;
+}
+
+.hero button{
+margin-top:20px;
+padding:12px 25px;
+border:none;
+background:#c9a66b;
+color:white;
+font-size:16px;
+cursor:pointer;
+}
+
+/* SERVICES */
+
+.services{
+padding:80px 8%;
+text-align:center;
+}
+
+.services h2{
+margin-bottom:40px;
+font-size:32px;
+}
+
+.service-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
+}
+
+.card{
+background:white;
+padding:30px;
+border-radius:10px;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+transition:0.3s;
+}
+
+.card:hover{
+transform:translateY(-10px);
+}
+
+/* PORTFOLIO */
+
+.portfolio{
+padding:80px 8%;
+background:#ffffff;
+}
+
+.portfolio h2{
+text-align:center;
+margin-bottom:40px;
+}
+
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:20px;
+}
+
+.gallery img{
+width:100%;
+border-radius:10px;
+transition:0.4s;
+}
+
+.gallery img:hover{
+transform:scale(1.05);
+}
+
+/* ABOUT */
+
+.about{
+padding:80px 8%;
+display:flex;
+flex-wrap:wrap;
+align-items:center;
+gap:40px;
+}
+
+.about img{
+width:400px;
+border-radius:10px;
+}
+
+.about-text{
+max-width:500px;
+}
+
+/* CONTACT */
+
+.contact{
+padding:80px 8%;
+background:#0e1a2b;
+color:white;
+text-align:center;
+}
+
+.contact form{
+margin-top:30px;
+}
+
+.contact input,
+.contact textarea{
+width:100%;
+max-width:400px;
+padding:12px;
+margin:10px 0;
+border:none;
+border-radius:5px;
+}
+
+.contact button{
+padding:12px 25px;
+border:none;
+background:#c9a66b;
+color:white;
+cursor:pointer;
+}
+
+/* FOOTER */
+
+footer{
+text-align:center;
+padding:20px;
+background:#08101c;
+color:white;
+}
+
+/* ANIMATION */
+
+@keyframes fadeUp{
+from{
+opacity:0;
+transform:translateY(40px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+</style>
+</head>
+
+<body>
+
+<nav>
+<h1>Rifinito Di Roma</h1>
+<ul>
+<li><a href="#">Home</a></li>
+<li><a href="#">Services</a></li>
+<li><a href="#">Portfolio</a></li>
+<li><a href="#">Contact</a></li>
+</ul>
+</nav>
+
+<section class="hero">
+<div class="hero-content">
+<h2>Luxury Interior Design</h2>
+<p>Transforming spaces into elegant and timeless interiors</p>
+<button>View Projects</button>
+</div>
+</section>
+
+<section class="services">
+<h2>Our Services</h2>
+
+<div class="service-grid">
+
+<div class="card">
+<h3>Home Interior</h3>
+<p>Beautiful modern interiors designed for comfort and luxury.</p>
+</div>
+
+<div class="card">
+<h3>Modular Kitchen</h3>
+<p>Smart and elegant modular kitchen solutions.</p>
+</div>
+
+<div class="card">
+<h3>Office Design</h3>
+<p>Professional interiors for offices and commercial spaces.</p>
+</div>
+
+<div class="card">
+<h3>Renovation</h3>
+<p>Complete makeover services for homes and businesses.</p>
+</div>
+
+</div>
+</section>
+
+<section class="portfolio">
+<h2>Our Projects</h2>
+
+<div class="gallery">
+
+<img src="https://images.unsplash.com/photo-1616594039964-ae9021a400a0">
+<img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c">
+<img src="https://images.unsplash.com/photo-1618220179428-22790b461013">
+<img src="https://images.unsplash.com/photo-1582582494700-2c3bba9f0c73">
+
+</div>
+</section>
+
+<section class="about">
+
+<img src="https://images.unsplash.com/photo-1505691938895-1758d7feb511">
+
+<div class="about-text">
+<h2>About Us</h2>
+<p>
+Rifinito Di Roma is a luxury interior design studio in Gaya.
+We specialize in modern, elegant and functional spaces
+for homes, offices and commercial projects.
+</p>
+</div>
+
+</section>
+
+<section class="contact">
+
+<h2>Contact Us</h2>
+
+<p>
+RR Interiors, Katari Hill Rd, near A.M. College,
+Shiv Puri Colony, Gaya, Bihar
+</p>
+
+<p>Phone: 9288336686</p>
+
+<form>
+
+<input type="text" placeholder="Your Name">
+
+<input type="email" placeholder="Email">
+
+<textarea rows="4" placeholder="Message"></textarea>
+
+<br>
+
+<button>Send Message</button>
+
+</form>
+
+</section>
+
+<footer>
+© 2026 Rifinito Di Roma | Interior Design Studio
+</footer>
+
+</body>
+</html>
