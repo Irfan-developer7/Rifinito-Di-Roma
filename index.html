@@ -2,10 +2,11 @@
 <html lang="en">
 
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Rifinito Roma Interior</title>
+<title>RIFINITO DI ROMA</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
@@ -15,6 +16,7 @@
 margin:0;
 padding:0;
 box-sizing:border-box;
+scroll-behavior:smooth;
 }
 
 body{
@@ -40,6 +42,7 @@ z-index:1000;
 .logo{
 font-size:24px;
 font-weight:600;
+letter-spacing:1px;
 }
 
 .logo span{
@@ -98,10 +101,11 @@ margin-bottom:20px;
 
 .btn{
 background:#d4a373;
-padding:12px 25px;
+padding:14px 28px;
 color:white;
 text-decoration:none;
 border-radius:5px;
+font-weight:500;
 }
 
 /* SECTIONS */
@@ -158,6 +162,16 @@ color:white;
 padding:40px 20px;
 }
 
+.contact-info{
+margin-bottom:25px;
+line-height:1.8;
+}
+
+.contact-info a{
+color:#d4a373;
+text-decoration:none;
+}
+
 .contact form{
 display:flex;
 flex-direction:column;
@@ -178,6 +192,29 @@ padding:12px;
 color:white;
 border-radius:5px;
 cursor:pointer;
+}
+
+/* MAP */
+
+.map{
+margin-top:30px;
+border-radius:10px;
+overflow:hidden;
+}
+
+/* WHATSAPP BUTTON */
+
+.whatsapp{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+color:white;
+font-size:24px;
+padding:12px 16px;
+border-radius:50%;
+text-decoration:none;
+box-shadow:0 4px 10px rgba(0,0,0,0.3);
 }
 
 /* RESPONSIVE */
@@ -223,16 +260,16 @@ font-size:55px;
 
 <header>
 
-<div class="logo">Rifinito <span>Roma</span></div>
+<div class="logo">RIFINITO <span>DI ROMA</span></div>
 
 <div class="hamburger" onclick="toggleMenu()">☰</div>
 
 <nav id="menu">
 <a href="#">Home</a>
-<a href="#">Services</a>
-<a href="#">Projects</a>
-<a href="#">About</a>
-<a href="#">Contact</a>
+<a href="#services">Services</a>
+<a href="#projects">Projects</a>
+<a href="#about">About</a>
+<a href="#contact">Contact</a>
 </nav>
 
 </header>
@@ -242,18 +279,20 @@ font-size:55px;
 <section class="hero">
 
 <div>
+
 <h1>Luxury Interior Design</h1>
 
 <p>Transform your space with elegant and modern interior solutions.</p>
 
-<a href="#" class="btn">View Portfolio</a>
+<a href="#projects" class="btn">View Portfolio</a>
+
 </div>
 
 </section>
 
 <!-- SERVICES -->
 
-<section class="container">
+<section id="services" class="container">
 
 <h2 style="text-align:center;margin-bottom:30px;">Our Services</h2>
 
@@ -285,7 +324,7 @@ font-size:55px;
 
 <!-- PROJECTS -->
 
-<section class="container">
+<section id="projects" class="container">
 
 <h2 style="text-align:center;margin-bottom:30px;">Our Projects</h2>
 
@@ -303,7 +342,7 @@ font-size:55px;
 
 <!-- ABOUT -->
 
-<section class="container about">
+<section id="about" class="container about">
 
 <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c">
 
@@ -318,11 +357,22 @@ Our mission is to design beautiful and functional spaces.
 
 <!-- CONTACT -->
 
-<section class="contact">
+<section id="contact" class="contact">
 
 <div class="container">
 
 <h2 style="text-align:center;margin-bottom:30px;">Contact Us</h2>
+
+<div class="contact-info">
+
+<p><strong>Address:</strong><br>
+RR Interiors, Katari Hill Rd, near A.M. College,<br>
+Shiv Puri Colony, Gaya, Bihar 823001</p>
+
+<p><strong>Phone:</strong>
+<a href="tel:9288336686">9288336686</a></p>
+
+</div>
 
 <form>
 
@@ -336,9 +386,24 @@ Our mission is to design beautiful and functional spaces.
 
 </form>
 
+<div class="map">
+
+<iframe
+src="https://maps.google.com/maps?q=Katari%20Hill%20Rd%20Gaya&t=&z=13&ie=UTF8&iwloc=&output=embed"
+width="100%"
+height="300"
+style="border:0;">
+</iframe>
+
+</div>
+
 </div>
 
 </section>
+
+<!-- WHATSAPP BUTTON -->
+
+<a class="whatsapp" href="https://wa.me/919288336686" target="_blank">💬</a>
 
 <script>
 
